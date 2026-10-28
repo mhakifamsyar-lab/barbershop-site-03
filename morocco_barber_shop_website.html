@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ms" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOROCCO BARBER SHOP | Taman Bukit Keramat, Mentakab</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;0,900;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mc: {
+                            terracotta: '#C85A32',
+                            terracottaDark: '#A0411E',
+                            gold: '#D4AF37',
+                            goldHover: '#B89628',
+                            dark: '#0B0F19',
+                            card: '#141A29',
+                            border: '#232D42',
+                            sand: '#F7F3E9',
+                            sandDark: '#E8DFCC'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0B0F19;
+        }
+        .font-serif-title {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Moroccan Zellij / Star Tile Geometric Background Pattern */
+        .bg-moroccan-pattern {
+            background-image: 
+                radial-gradient(rgba(200, 90, 50, 0.15) 1.5px, transparent 1.5px),
+                radial-gradient(rgba(212, 175, 55, 0.1) 1.5px, #0B0F19 1.5px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+    </style>
+</head>
+<body class="bg-mc-dark text-slate-100 selection:bg-mc-terracotta selection:text-white min-h-screen">
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 bg-mc-dark/90 backdrop-blur-md border-b border-mc-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-mc-terracotta to-mc-gold flex items-center justify-center text-mc-dark font-black text-xl shadow-lg shadow-mc-terracotta/25 border border-mc-gold/40 group-hover:scale-105 transition-transform">
+                        <i data-lucide="crown" class="w-6 h-6 text-mc-dark stroke-[2.5]"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xl sm:text-2xl font-extrabold tracking-wider text-white uppercase font-serif-title">MOROCCO</span>
+                            <span class="text-[10px] px-2 py-0.5 rounded bg-mc-gold/20 text-mc-gold font-bold border border-mc-gold/30">BARBER</span>
+                        </div>
+                        <p class="text-[10px] tracking-widest text-slate-400 font-semibold uppercase">Mentakab • Royal Grooming</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-300">
+                    <a href="#about" class="hover:text-mc-gold transition-colors">Pengenalan</a>
+                    <a href="#services" class="hover:text-mc-gold transition-colors">Menu Servis</a>
+                    <a href="#hours" class="hover:text-mc-gold transition-colors">Waktu Operasi</a>
+                    <a href="#location" class="hover:text-mc-gold transition-colors">Lokasi</a>
+                    <a href="#booking" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-mc-terracotta to-mc-terracottaDark hover:from-mc-terracottaDark hover:to-mc-terracotta text-white font-bold transition-all shadow-md shadow-mc-terracotta/30 flex items-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4"></i> Tempah Slot
+                    </a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <button id="menuBtn" class="md:hidden p-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-mc-card border border-mc-border">
+                    <i data-lucide="menu" id="menuIcon" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-mc-card border-b border-mc-border px-4 pt-3 pb-6 space-y-3">
+            <a href="#about" class="mobile-link block py-2 text-slate-300 hover:text-mc-gold">Pengenalan</a>
+            <a href="#services" class="mobile-link block py-2 text-slate-300 hover:text-mc-gold">Menu Servis</a>
+            <a href="#hours" class="mobile-link block py-2 text-slate-300 hover:text-mc-gold">Waktu Operasi</a>
+            <a href="#location" class="mobile-link block py-2 text-slate-300 hover:text-mc-gold">Lokasi</a>
+            <a href="#booking" class="mobile-link block py-2.5 text-center rounded-xl bg-mc-terracotta text-white font-bold">
+                Tempah Slot Sekarang
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="about" class="relative py-20 md:py-32 overflow-hidden bg-moroccan-pattern border-b border-mc-border">
+        <!-- Moroccan Lantern Glow Decor -->
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-mc-terracotta/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <div class="space-y-6 text-center md:text-left">
+                    <!-- Status Badge -->
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-mc-card border border-mc-border text-sm">
+                        <span id="statusDot" class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+                        <span id="statusText" class="text-slate-300 font-medium">Semak status kedai...</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
+                        Pengalaman Grooming <br />
+                        <span class="font-serif-title text-transparent bg-clip-text bg-gradient-to-r from-mc-gold via-amber-200 to-mc-terracotta">Moroccan Luxury</span> <br />
+                        Di Mentakab.
+                    </h1>
+
+                    <p class="text-slate-400 text-base sm:text-lg max-w-lg mx-auto md:mx-0 leading-relaxed">
+                        Selamat datang ke <strong class="text-white">Morocco Barber Shop</strong>. Kami membawakan sentuhan ketelitian potongan gaya moden & klasik, ukiran janggut kemas, serta suasana mesra dan selesa di Taman Bukit Keramat.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
+                        <a href="#booking" class="px-8 py-4 rounded-xl bg-gradient-to-r from-mc-terracotta to-mc-terracottaDark hover:opacity-95 text-white font-bold text-lg transition-all shadow-xl shadow-mc-terracotta/25 flex items-center justify-center gap-3">
+                            <i data-lucide="scissors" class="w-5 h-5"></i>
+                            Tempah WhatsApp
+                        </a>
+                        <a href="https://wa.me/60134446890" target="_blank" rel="noreferrer" class="px-8 py-4 rounded-xl bg-mc-card hover:bg-slate-800 text-white font-semibold text-lg border border-mc-border transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="phone" class="w-5 h-5 text-mc-gold"></i>
+                            013-444 6890
+                        </a>
+                    </div>
+
+                    <!-- Quick Highlights -->
+                    <div class="pt-6 grid grid-cols-3 gap-4 border-t border-mc-border/60">
+                        <div class="bg-mc-card/60 p-3 rounded-xl border border-mc-border">
+                            <p class="text-lg sm:text-xl font-bold text-mc-gold font-serif-title">Premium</p>
+                            <p class="text-[11px] text-slate-400">Gaya & Kemasan</p>
+                        </div>
+                        <div class="bg-mc-card/60 p-3 rounded-xl border border-mc-border">
+                            <p class="text-lg sm:text-xl font-bold text-mc-terracotta font-serif-title">Selesa</p>
+                            <p class="text-[11px] text-slate-400">Ruang Ber-AC</p>
+                        </div>
+                        <div class="bg-mc-card/60 p-3 rounded-xl border border-mc-border">
+                            <p class="text-lg sm:text-xl font-bold text-white font-serif-title">7 Hari</p>
+                            <p class="text-[11px] text-slate-400">Waktu Beroperasi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Moroccan Banner Card -->
+                <div class="relative">
+                    <div class="relative mx-auto max-w-md bg-mc-card border border-mc-border p-8 rounded-3xl shadow-2xl overflow-hidden">
+                        
+                        <!-- Moroccan Decorative Corner Trim -->
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-mc-gold/20 to-transparent rounded-bl-full pointer-events-none"></div>
+
+                        <div class="flex justify-between items-start mb-6 border-b border-mc-border pb-4">
+                            <div>
+                                <h3 class="text-2xl font-extrabold font-serif-title text-white tracking-wider">MOROCCO BARBER</h3>
+                                <p class="text-xs text-mc-gold font-semibold tracking-widest uppercase">Classic & Modern Haircut</p>
+                            </div>
+                            <div class="w-12 h-12 rounded-xl bg-mc-terracotta/20 border border-mc-terracotta/40 flex items-center justify-center text-mc-terracotta">
+                                <i data-lucide="sparkles" class="w-6 h-6"></i>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 my-6">
+                            <div class="flex items-center gap-4 p-3.5 rounded-xl bg-mc-dark/80 border border-mc-border">
+                                <i data-lucide="scissors" class="text-mc-gold w-5 h-5 shrink-0"></i>
+                                <span class="text-sm text-slate-200">Fade, Undercut & Classic Grooming Specialist</span>
+                            </div>
+                            <div class="flex items-center gap-4 p-3.5 rounded-xl bg-mc-dark/80 border border-mc-border">
+                                <i data-lucide="flame" class="text-mc-terracotta w-5 h-5 shrink-0"></i>
+                                <span class="text-sm text-slate-200">Hot Towel Shave & Beard Sculpting</span>
+                            </div>
+                            <div class="flex items-center gap-4 p-3.5 rounded-xl bg-mc-dark/80 border border-mc-border">
+                                <i data-lucide="shield-check" class="text-emerald-400 w-5 h-5 shrink-0"></i>
+                                <span class="text-sm text-slate-200">Peralatan Nyahkuman & Pemotongan Higienis</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-mc-border flex justify-between items-center text-xs text-slate-400">
+                            <span class="flex items-center gap-1"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-mc-terracotta"></i> Bukit Keramat, Mentakab</span>
+                            <span class="text-mc-gold font-bold">#MoroccoBarber</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-20 bg-mc-dark border-b border-mc-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-mc-gold/10 text-mc-gold border border-mc-gold/20 text-xs font-bold uppercase tracking-wider mb-3">
+                    <i data-lucide="scissors" class="w-3.5 h-3.5"></i> Menu Perkhidmatan
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-serif-title">Senarai Perkhidmatan & Harga</h2>
+                <p class="text-slate-400 mt-3 text-sm sm:text-base">Pilih kemasan gaya anda mengikut keselesaan dan cita rasa terbaik.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="bg-mc-card border border-mc-border hover:border-mc-terracotta/60 rounded-2xl p-6 transition-all hover:-translate-y-1 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-bold text-xl text-white group-hover:text-mc-gold transition-colors">Signature Morocco Haircut</h3>
+                                <span class="text-xs text-mc-gold">Potongan Gaya Moden / Klasik</span>
+                            </div>
+                            <span class="px-3 py-1 bg-mc-terracotta/20 text-mc-gold border border-mc-gold/30 text-sm font-bold rounded-full">RM 20 - 25</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">Potongan rambut presisi mengikut bentuk muka, termasuk konsultasi gaya, cucian ringkas dan *styling* kemas.</p>
+                    </div>
+                    <button onclick="selectService('Signature Morocco Haircut (RM 20 - 25)')" class="w-full py-2.5 rounded-xl bg-mc-dark group-hover:bg-mc-terracotta hover:!bg-mc-terracottaDark text-slate-300 group-hover:text-white font-semibold text-sm transition-all border border-mc-border">
+                        Pilih Perkhidmatan
+                    </button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-mc-card border border-mc-border hover:border-mc-terracotta/60 rounded-2xl p-6 transition-all hover:-translate-y-1 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-bold text-xl text-white group-hover:text-mc-gold transition-colors">Beard Trim & Hot Towel</h3>
+                                <span class="text-xs text-mc-gold">Ukiran Janggut & Misai</span>
+                            </div>
+                            <span class="px-3 py-1 bg-mc-terracotta/20 text-mc-gold border border-mc-gold/30 text-sm font-bold rounded-full">RM 10 - 15</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">Grooming janggut kemas menggunakan pisau cukur berbilah bersih dan sentuhan tuala hangat yang menyegarkan.</p>
+                    </div>
+                    <button onclick="selectService('Beard Trim & Hot Towel (RM 10 - 15)')" class="w-full py-2.5 rounded-xl bg-mc-dark group-hover:bg-mc-terracotta hover:!bg-mc-terracottaDark text-slate-300 group-hover:text-white font-semibold text-sm transition-all border border-mc-border">
+                        Pilih Perkhidmatan
+                    </button>
+                </div>
+
+                <!-- Service 3 (Featured) -->
+                <div class="bg-mc-card border-2 border-mc-gold rounded-2xl p-6 transition-all hover:-translate-y-1 flex flex-col justify-between relative overflow-hidden shadow-lg shadow-mc-gold/10">
+                    <div class="absolute top-0 right-0 bg-mc-gold text-mc-dark text-[10px] font-black px-3 py-1 rounded-bl-xl uppercase tracking-wider font-bold">
+                        ★ POPULAR
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-bold text-xl text-white font-serif-title">Royal Morocco Combo</h3>
+                                <span class="text-xs text-mc-gold">Pakej Lengkap Mewah</span>
+                            </div>
+                            <span class="px-3 py-1 bg-mc-gold text-mc-dark text-sm font-bold rounded-full">RM 35 - 40</span>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">Pakej Lengkap: Potongan Rambut + Ukiran Janggut + Cuci Hair Wash + Urutan Kepala Ringkas + Hot Towel Treatment.</p>
+                    </div>
+                    <button onclick="selectService('Royal Morocco Combo (RM 35 - 40)')" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-mc-gold to-amber-500 hover:opacity-90 text-mc-dark font-bold text-sm transition-all shadow-md shadow-mc-gold/20">
+                        Pilih Pakej Popular
+                    </button>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-mc-card border border-mc-border hover:border-mc-terracotta/60 rounded-2xl p-6 transition-all hover:-translate-y-1 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-bold text-xl text-white group-hover:text-mc-gold transition-colors">Junior Cut (Kanak-kanak)</h3>
+                                <span class="text-xs text-mc-gold">Gaya Kanak-kanak Segar</span>
+                            </div>
+                            <span class="px-3 py-1 bg-mc-terracotta/20 text-mc-gold border border-mc-gold/30 text-sm font-bold rounded-full">RM 15</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">Potongan khas mesra kanak-kanak disulami dengan layanan sabar, selamat, dan kemas.</p>
+                    </div>
+                    <button onclick="selectService('Junior Cut (Kanak-kanak) (RM 15)')" class="w-full py-2.5 rounded-xl bg-mc-dark group-hover:bg-mc-terracotta hover:!bg-mc-terracottaDark text-slate-300 group-hover:text-white font-semibold text-sm transition-all border border-mc-border">
+                        Pilih Perkhidmatan
+                    </button>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-mc-card border border-mc-border hover:border-mc-terracotta/60 rounded-2xl p-6 transition-all hover:-translate-y-1 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-bold text-xl text-white group-hover:text-mc-gold transition-colors">Hair Coloring / Dye</h3>
+                                <span class="text-xs text-mc-gold">Warna Rambut & Highlight</span>
+                            </div>
+                            <span class="px-3 py-1 bg-mc-terracotta/20 text-mc-gold border border-mc-gold/30 text-sm font-bold rounded-full">RM 50+</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">Pewarnaan rambut trendi atau perlindungan warna hitam semulajadi dengan kualiti produk penjagaan rambut yang premium.</p>
+                    </div>
+                    <button onclick="selectService('Hair Coloring / Dye (RM 50+)')" class="w-full py-2.5 rounded-xl bg-mc-dark group-hover:bg-mc-terracotta hover:!bg-mc-terracottaDark text-slate-300 group-hover:text-white font-semibold text-sm transition-all border border-mc-border">
+                        Pilih Perkhidmatan
+                    </button>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-mc-card border border-mc-border hover:border-mc-terracotta/60 rounded-2xl p-6 transition-all hover:-translate-y-1 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-bold text-xl text-white group-hover:text-mc-gold transition-colors">Hair Wash & Premium Styling</h3>
+                                <span class="text-xs text-mc-gold">Cucian & Dandanan Gaya</span>
+                            </div>
+                            <span class="px-3 py-1 bg-mc-terracotta/20 text-mc-gold border border-mc-gold/30 text-sm font-bold rounded-full">RM 10</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">Cucian rambut bersih segar dan dandanan mengikut kesesuaian acara anda menggunakan produk *pomade/clay* berkualiti tinggi.</p>
+                    </div>
+                    <button onclick="selectService('Hair Wash & Premium Styling (RM 10)')" class="w-full py-2.5 rounded-xl bg-mc-dark group-hover:bg-mc-terracotta hover:!bg-mc-terracottaDark text-slate-300 group-hover:text-white font-semibold text-sm transition-all border border-mc-border">
+                        Pilih Perkhidmatan
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOURS & LOCATION SECTION -->
+    <section id="hours" class="py-20 bg-moroccan-pattern border-b border-mc-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                
+                <!-- Waktu Operasi -->
+                <div class="bg-mc-card border border-mc-border p-8 rounded-3xl shadow-xl">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="p-2.5 rounded-xl bg-mc-terracotta/20 border border-mc-terracotta/40 text-mc-terracotta">
+                            <i data-lucide="clock" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-white font-serif-title">Waktu Operasi</h2>
+                            <p class="text-xs text-mc-gold">Beroperasi Setiap Hari</p>
+                        </div>
+                    </div>
+
+                    <p class="text-slate-400 text-sm mb-6">
+                        Morocco Barber Shop sedia berkhidmat <strong class="text-white">7 hari seminggu</strong>. Harap maklum waktu operasi bermula petang pada hari Jumaat.
+                    </p>
+
+                    <div class="space-y-3" id="hoursContainer">
+                        <!-- Rendered dynamically by JS -->
+                    </div>
+                </div>
+
+                <!-- Lokasi & Contact -->
+                <div id="location" class="bg-mc-card border border-mc-border p-8 rounded-3xl flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="p-2.5 rounded-xl bg-mc-gold/20 border border-mc-gold/40 text-mc-gold">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-2xl font-bold text-white font-serif-title">Lokasi & Contact</h2>
+                                <p class="text-xs text-mc-gold">Mentakab, Pahang</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-mc-dark/80 border border-mc-border mb-6">
+                            <p class="text-slate-200 font-bold text-lg mb-1 flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-mc-terracotta"></span>
+                                MOROCCO BARBER SHOP
+                            </p>
+                            <p class="text-slate-400 text-sm leading-relaxed pl-5">
+                                No.12 Tingkat 1, Jalan Bukit Keramat 8,<br>
+                                Taman Bukit Keramat, 28400 Mentakab, Pahang
+                            </p>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-slate-300 mb-8 p-4 rounded-2xl bg-mc-dark/80 border border-mc-border">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">Hubungi / WhatsApp</p>
+                                <a href="tel:0134446890" class="font-bold text-white hover:text-mc-gold transition-colors text-lg">
+                                    013-444 6890
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps Action -->
+                    <div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=No.+12+Tingkat+1,+Jalan+Bukit+Keramat+8,+Taman+Bukit+Keramat,+28400+Mentakab,+Pahang" target="_blank" rel="noreferrer" class="w-full py-3.5 px-4 rounded-xl bg-mc-dark hover:bg-slate-800 text-white font-semibold transition-all flex items-center justify-center gap-2 border border-mc-border">
+                            <i data-lucide="external-link" class="w-5 h-5 text-mc-gold"></i>
+                            Buka Lokasi Dalam Google Maps
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING SECTION -->
+    <section id="booking" class="py-20 bg-mc-dark relative">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-mc-terracotta/20 text-mc-gold border border-mc-gold/30 text-xs font-bold uppercase tracking-wider mb-2">
+                    <i data-lucide="calendar" class="w-3.5 h-3.5"></i> Tempahan Slot
+                </div>
+                <h2 class="text-3xl font-extrabold text-white font-serif-title">Tempah Slot Gunting Rambut</h2>
+                <p class="text-slate-400 text-sm mt-2">Isi borang di bawah untuk membuat tempahan mudah terus ke WhatsApp Morocco Barber Shop.</p>
+            </div>
+
+            <form id="bookingForm" class="bg-mc-card border border-mc-border p-6 sm:p-8 rounded-3xl space-y-6 shadow-2xl">
+                
+                <!-- Nama Pelanggan -->
+                <div>
+                    <label class="block text-sm font-semibold text-slate-300 mb-2">Nama Pelanggan</label>
+                    <div class="relative">
+                        <i data-lucide="user" class="absolute left-3.5 top-3.5 text-slate-500 w-5 h-5"></i>
+                        <input type="text" id="customerName" required placeholder="Contoh: Muhammad Hairi" class="w-full pl-11 pr-4 py-3 bg-mc-dark border border-mc-border rounded-xl text-white focus:outline-none focus:border-mc-terracotta transition-colors">
+                    </div>
+                </div>
+
+                <!-- Pilihan Perkhidmatan -->
+                <div>
+                    <label class="block text-sm font-semibold text-slate-300 mb-2">Pilihan Perkhidmatan</label>
+                    <select id="serviceSelect" class="w-full px-4 py-3 bg-mc-dark border border-mc-border rounded-xl text-white focus:outline-none focus:border-mc-terracotta transition-colors">
+                        <option value="Signature Morocco Haircut (RM 20 - 25)">Signature Morocco Haircut (RM 20 - 25)</option>
+                        <option value="Beard Trim & Hot Towel (RM 10 - 15)">Beard Trim & Hot Towel (RM 10 - 15)</option>
+                        <option value="Royal Morocco Combo (RM 35 - 40)">Royal Morocco Combo (RM 35 - 40)</option>
+                        <option value="Junior Cut (Kanak-kanak) (RM 15)">Junior Cut (Kanak-kanak) (RM 15)</option>
+                        <option value="Hair Coloring / Dye (RM 50+)">Hair Coloring / Dye (RM 50+)</option>
+                        <option value="Hair Wash & Premium Styling (RM 10)">Hair Wash & Premium Styling (RM 10)</option>
+                    </select>
+                </div>
+
+                <!-- Tarikh & Masa -->
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-300 mb-2">Tarikh Cadangan</label>
+                        <input type="date" id="bookingDate" required class="w-full px-4 py-3 bg-mc-dark border border-mc-border rounded-xl text-white focus:outline-none focus:border-mc-terracotta transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-300 mb-2">Anggaran Masa</label>
+                        <input type="time" id="bookingTime" required class="w-full px-4 py-3 bg-mc-dark border border-mc-border rounded-xl text-white focus:outline-none focus:border-mc-terracotta transition-colors">
+                    </div>
+                </div>
+
+                <!-- Pilihan Barber -->
+                <div>
+                    <label class="block text-sm font-semibold text-slate-300 mb-2">Pilihan Barber (Opsional)</label>
+                    <select id="barberSelect" class="w-full px-4 py-3 bg-mc-dark border border-mc-border rounded-xl text-white focus:outline-none focus:border-mc-terracotta transition-colors">
+                        <option value="Mana-mana Barber Kelapangan">Mana-mana Barber Kelapangan</option>
+                        <option value="Senior Barber">Senior Barber</option>
+                        <option value="Specialist Master Barber">Specialist Master Barber</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full py-4 bg-gradient-to-r from-mc-terracotta to-mc-terracottaDark hover:opacity-95 text-white font-bold rounded-xl transition-all shadow-lg shadow-mc-terracotta/30 text-lg flex items-center justify-center gap-2">
+                    <i data-lucide="message-square" class="w-5 h-5"></i>
+                    Hantar Tempahan Ke WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-mc-border py-12 bg-mc-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-mc-terracotta flex items-center justify-center text-white font-bold">
+                    <i data-lucide="crown" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <span class="font-extrabold tracking-wider text-white uppercase font-serif-title">MOROCCO BARBER SHOP</span>
+                    <p class="text-[10px] text-slate-500">Taman Bukit Keramat, Mentakab, Pahang</p>
+                </div>
+            </div>
+
+            <p class="text-slate-500 text-sm text-center">
+                © <span id="year"></span> Morocco Barber Shop. Hak Cipta Terpelihara.
+            </p>
+
+            <div class="flex gap-4 text-slate-400">
+                <a href="https://wa.me/60134446890" target="_blank" class="hover:text-mc-gold transition-colors"><i data-lucide="message-circle" class="w-5 h-5"></i></a>
+                <a href="tel:0134446890" class="hover:text-mc-gold transition-colors"><i data-lucide="phone" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // Data Waktu Operasi Morocco Barber Shop
+        // Selasa - Khamis & Sabtu - Isnin: 12:00 PM – 10:00 PM (12 to 22)
+        // Jumaat: 3:00 PM – 10:00 PM (15 to 22)
+        const hoursData = [
+            { day: "Isnin", time: "12:00 PM – 10:00 PM", openHour: 12, closeHour: 22, isClosed: false },
+            { day: "Selasa", time: "12:00 PM – 10:00 PM", openHour: 12, closeHour: 22, isClosed: false },
+            { day: "Rabu", time: "12:00 PM – 10:00 PM", openHour: 12, closeHour: 22, isClosed: false },
+            { day: "Khamis", time: "12:00 PM – 10:00 PM", openHour: 12, closeHour: 22, isClosed: false },
+            { day: "Jumaat", time: "3:00 PM – 10:00 PM", openHour: 15, closeHour: 22, isClosed: false },
+            { day: "Sabtu", time: "12:00 PM – 10:00 PM", openHour: 12, closeHour: 22, isClosed: false },
+            { day: "Ahad", time: "12:00 PM – 10:00 PM", openHour: 12, closeHour: 22, isClosed: false },
+        ];
+
+        // Render Schedule UI
+        const hoursContainer = document.getElementById('hoursContainer');
+        hoursData.forEach(h => {
+            const item = document.createElement('div');
+            item.className = "flex justify-between items-center p-3.5 rounded-xl border bg-mc-dark/60 border-mc-border text-slate-200";
+            item.innerHTML = `
+                <span class="font-medium">${h.day}</span>
+                <span class="font-semibold text-sm text-mc-gold">${h.time}</span>
+            `;
+            hoursContainer.appendChild(item);
+        });
+
+        // Live Status Check
+        function checkOpenStatus() {
+            const now = new Date();
+            // JS getDay(): 0=Ahad, 1=Isnin, 2=Selasa, 3=Rabu, 4=Khamis, 5=Jumaat, 6=Sabtu
+            const dayMap = [6, 0, 1, 2, 3, 4, 5]; 
+            const todaySchedule = hoursData[dayMap[now.getDay()]];
+            
+            const currentDecimalHour = now.getHours() + (now.getMinutes() / 60);
+
+            const statusDot = document.getElementById('statusDot');
+            const statusText = document.getElementById('statusText');
+
+            if (currentDecimalHour >= todaySchedule.openHour && currentDecimalHour < todaySchedule.closeHour) {
+                statusDot.className = "w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse";
+                statusText.textContent = `Buka Sekarang • Tutup Jam 10:00 PM`;
+            } else {
+                statusDot.className = "w-2.5 h-2.5 rounded-full bg-mc-terracotta";
+                statusText.textContent = `Tutup Masa Ini (Waktu Buka: ${todaySchedule.time})`;
+            }
+        }
+        checkOpenStatus();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Set default min date in form
+        const dateInput = document.getElementById('bookingDate');
+        const todayStr = new Date().toISOString().split('T')[0];
+        dateInput.value = todayStr;
+        dateInput.min = todayStr;
+
+        // Function to select service from card
+        function selectService(serviceName) {
+            document.getElementById('serviceSelect').value = serviceName;
+            document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // WhatsApp Form Handler
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('customerName').value;
+            const service = document.getElementById('serviceSelect').value;
+            const date = document.getElementById('bookingDate').value;
+            const time = document.getElementById('bookingTime').value;
+            const barber = document.getElementById('barberSelect').value;
+
+            const message = `Salam / Helo Morocco Barber Shop! ✂️\nSaya ingin membuat tempahan slot gunting rambut:\n\n` +
+                `👤 *Nama:* ${name}\n` +
+                `💈 *Perkhidmatan:* ${service}\n` +
+                `📅 *Tarikh:* ${date}\n` +
+                `⏰ *Anggaran Masa:* ${time}\n` +
+                `👤 *Pilihan Barber:* ${barber}\n\n` +
+                `Adakah slot pada tarikh & masa ini masih ada? Terima kasih!`;
+
+            const whatsappNumber = "60134446890";
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappUrl, '_blank');
+        });
+
+        // Dynamic Year Footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
